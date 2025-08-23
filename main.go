@@ -12,6 +12,7 @@ import (
 func main() {
 	config := flag.String("config", "config.toml", "Config file for default settings.")
 	query := flag.String("query", "", "Search query")
+	perPage := flag.String("per_page", "1", "Results per page, defaults to one")
 	flag.Parse()
 
 	credentials, err := user.GetUserCredentials(config)
@@ -21,7 +22,7 @@ func main() {
 
 	params := make(map[string]string)
 	params["query"] = *query
-	params["per_page"] = "1"
+	params["per_page"] = *perPage
 
 	data, err := endpoints.Get("https://api.unsplash.com/search/photos", credentials, params)
 	if err != nil {
