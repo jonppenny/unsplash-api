@@ -11,7 +11,7 @@ import (
 
 func main() {
 	config := flag.String("config", "config.toml", "Config file for default settings.")
-	query := flag.String("query", "", "Search query")
+	query := flag.String("query", "", "Search query (required)")
 	perPage := flag.String("per_page", "1", "Results per page, defaults to one")
 	flag.Parse()
 

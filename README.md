@@ -8,7 +8,7 @@ To search for a specific term, add a query flag, for example `-query="mountain"`
 
 ## Available flags
 
-| key       | Value  | Example    |
-|-----------|--------|------------|
-| -query    | String | "mountain" |
-| -per_page | String | "3"        |
+| key       | Value  | Example    | Required |
+|-----------|--------|------------|----------|
+| -query    | String | "mountain" | Yes      |
+| -per_page | String | "3"        | No       |
