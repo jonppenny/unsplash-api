@@ -29,5 +29,5 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Print(data)
+	fmt.Print(data + "\n")
 }
